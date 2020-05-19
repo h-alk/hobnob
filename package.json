@@ -1,0 +1,36 @@
+{
+  "name": "hobnob",
+  "version": "0.1.0",
+  "description": "Training React app ",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist && ./node_modules/.bin/babel src -d dist",
+    "serve": "yarn run build && node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon -w src --exec yarn run serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/h-alk/hobnob.git"
+  },
+  "keywords": [
+    "javascript",
+    "react"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/h-alk/hobnob/issues"
+  },
+  "homepage": "https://github.com/h-alk/hobnob#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "nodemon": "^2.0.4",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.8.7"
+  }
+}
