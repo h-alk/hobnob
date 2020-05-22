@@ -10,6 +10,7 @@
     "lint": "eslint src",
     "serve": "yarn run build && node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "test:e2e": "cucumber-js spec/cucumber/features --require-module @babel/register --require spec/cucumber/steps",
     "watch": "nodemon -w src --exec yarn run serve"
   },
   "repository": {
@@ -30,8 +31,10 @@
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
+    "@babel/register": "^7.9.0",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
+    "cucumber": "^6.0.5",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
